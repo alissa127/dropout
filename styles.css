@@ -1,0 +1,485 @@
+/* Global Styles */
+
+html {
+  font-size: 16px; /* Ensures base font size is consistent */
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff; /* Light grey background for better contrast */
+  color: #333; /* Darker text for readability */
+}
+
+/* Header Styles */
+header {
+  color: black;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  background-image: url('./Images/icons/gradient.png'); 
+  background-size: cover; 
+  background-position: center;
+  padding-top: 50px;
+  z-index: 10;
+}
+
+header h1 {
+  
+  font-weight: 400;
+  letter-spacing: 1px; /* Slight letter-spacing for a modern feel */
+}
+
+/* Navigation Styles */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  max-width: 1920px;
+  margin: auto;
+  padding-left: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  width: 180px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: DIN Condensed;
+  color: black;
+  font-size: 30pt;
+  font-weight: 400;
+  padding: 32px;
+  padding-left: 30pt;
+  padding-right: 20pt;
+  transition: color 0.3s ease;
+}
+/* paragraph Video */
+p {
+  font-family: "Oxanium", serif;
+  font-optical-sizing: auto;
+  font-size: 70pt;
+  font-weight: normal;
+  font-style: normal;
+  padding: 5pt;
+}
+
+.dropout {
+  background-image: url('./Images/icons/yellow_block_dropout.png'); /* Add your image URL here */
+  background-size: cover;
+  margin: 0;
+}
+.info-dropout:hover {
+  background-image: url('./Images/icons/yellow_block_dropout.png'); /* Add your image URL here */
+  background-size: cover;
+  margin: 0;
+}
+
+.info:hover {
+  background-image: url('./Images/icons/yellow_block_info.png'); /* Add your image URL here */
+  background-size: cover;
+  padding-top: 27px;
+  padding-left: 30pt;
+  padding-right: 20pt;
+}
+
+.info-info {
+  background-image: url('./Images/icons/yellow_block_info.png'); /* Add your image URL here */
+  background-size:cover;
+  padding-top: 27px;
+  padding-left: 30pt;
+  padding-right: 20pt;
+}
+
+
+nav ul li a.hidden {
+  display: none;  /* Hide the link */
+}
+
+/* Main content Styles */
+main {
+  padding: 0px 20px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+p {
+  padding-left: 10px;
+  line-height: 1.6;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;              /* Removes all margins */
+  padding: 0;             /* Optionally removes padding if any */
+  display: inline;        
+  unicode-bidi: normal; 
+}
+
+.content {
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-end; /* Align content to the right */
+  align-items: flex-start;
+  width: 100%;
+}
+
+.text-box {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  width: fit-content;
+  background-image: url('./Images/icons/yellow_blocks_1.png'); /* Replace with your image path */
+  background-size: cover;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  z-index: 10;
+  
+}
+
+
+/* Carousel Styles */
+.carousel-container {
+  position: relative;
+  max-width: 1920px;
+  margin: 0px auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.info-section {
+  position: relative;
+  max-width: 1920px;
+  margin: 0px auto;
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+}
+
+.info-container {
+  max-width: 1400px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-top: 120px
+}
+
+.left-box {
+  min-width: 260px;
+  max-width: 300px;
+  background-color: none;
+  padding: 20px;
+  margin-top: 100px;
+  margin-left: 20pt;
+  border-radius: 8px;
+  font-size: 17px;
+  font-family: "Oxanium", serif;
+  height: fit-content;
+}
+
+.center-box {
+  width: 100%;
+  overflow: auto;
+  height: calc(100vh - 130px);
+  
+}
+
+.box {
+  width: 100%;
+  max-width: 700px;
+  font-size: 33px;
+  font-family: DIN Condensed;
+  margin-left: 40pt;
+  margin-top: 20pt;
+
+}
+
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  margin-top: 160px;
+}
+
+.carousel-item {
+  display: flex;
+  position: relative;
+  min-width: 400px;
+  width: 400px;
+  height: 500px;
+  display: inline-block;
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  z-index: 1;
+}
+
+/* .carousel-image:nth-child(2) {
+  display: none;
+} */
+
+/* Button Styles */
+.buttons-wrapper {
+  display: flex;
+  gap: 10px; /* Adjust the spacing between buttons */
+  justify-content: center;
+  /* margin-bottom: 8px; */
+}
+
+.carousel-btn {
+font-family: Oxanium;
+  padding: 10px;
+  background-color: #4CAF50; /* Example button styling */
+  border: none;
+  cursor: pointer;
+}
+
+.carousel-btn:hover {
+  background-color: #45a049;
+}
+
+/* Slider Container Styling */
+.slider-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  gap: 15px;
+  z-index: 1000; /* Ensure the slider is on top of other elements */
+}
+
+/* Left and Right Chevron Icons */
+.fas {
+  font-size: 2.5rem; /* Larger icons for better visibility */
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+  z-index: 10; /* Ensure icons are above the slider */
+}
+
+/* Chevron hover effect */
+.fas:hover {
+  color: #4CAF50; /* Green color on hover */
+}
+
+ .slider {
+            margin-top: 15px ;
+            width: 70%; /* Set the width of the range slider */
+            height: 3px; /* Thin the range slider track */
+            -webkit-appearance: none; /* Remove default styling */
+            -moz-appearance: none;
+            appearance: none;
+            background: #ccc; /* Light gray background color for the track */
+            border-radius: 10px; /* Rounded corners for the track */
+            outline: none; /* Remove default outline */
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* Optional: Inner shadow for some depth */
+        }
+
+        /* Range slider active state (when thumb is dragged) */
+        .slider:active {
+            background: #3f3f3f; /* Darker gray background while dragging */
+        }
+
+        /* Slider Track (background of the slider) */
+        .slider::-webkit-slider-runnable-track {
+            height: 2px; /* Thin the track further */
+            background: #ccc; /* Light gray color */
+            border-radius: 10px; /* Rounded track corners */
+        }
+
+        .slider::-moz-range-track {
+            height: 2px; /* Thin the track further */
+            background: #ccc; /* Light gray color */
+            border-radius: 10px; /* Rounded track corners */
+        }
+
+        /* Slider Thumb (the part the user drags) */
+        .slider::-webkit-slider-thumb {
+          -webkit-appearance: none; /* Remove default styling */
+          -moz-appearance: none;
+          appearance: none;
+            width: 15px; /* Thumb size */
+            height: 15px;
+            border-radius: 50%; /* Make thumb circular */
+            background: #edff22; /* Yellow center */
+            border: 3px solid #ccc; /* Green border for the ring */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: -6.5px; /* Smooth transition for thumb */
+        }
+
+        .slider::-moz-range-thumb {
+          -webkit-appearance: none; /* Remove default styling */
+          -moz-appearance: none;
+          appearance: none;
+            width: 15px; /* Thumb size */
+            height: 15px;
+            border-radius: 50%; /* Make thumb circular */
+            background: #fff; /* Transparent center */
+            border: 3px solid #ccc; /* Green border for the ring */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: -6.5px; /* Smooth transition for thumb */
+        }
+
+        /* Slider Thumb Hover Effect */
+        .slider::-webkit-slider-thumb:hover {
+            border-color: #ff13fbcc; /* Darker green on hover */
+        }
+
+        .slider::-moz-range-thumb:hover {
+            border-color: #c7c7c7cc; /* Darker green on hover */
+        }
+
+        /* Slider Thumb Active Effect */
+        .slider::-webkit-slider-thumb:active {
+            border-color: #fb22ffcc; /* Even darker green when clicked */
+        }
+
+        .slider::-moz-range-thumb:active {
+            border-color: #ffec20cc; /* Even darker green when clicked */
+        }
+
+
+/* Image container for stacking images */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;  /* Ensure there’s space between images and buttons */
+}
+
+
+.carousel-item {
+  position: relative;  /* Ensure items are positioned relative to their parent */
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Center the content horizontally */
+  margin-bottom: 20px;  /* Add space below each carousel item */
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;  /* Ensure there’s space between images and buttons */
+}
+
+.buttons-wrapper {
+  display: flex;
+  gap: 10px;
+  justify-content: center; /* Center buttons horizontally */
+  position: relative;
+  z-index: 10;  /* Ensure buttons are above images */
+}
+
+.carousel-btn {
+  padding: 5px 10px;
+  background-color: #efff3c;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.carousel-btn:hover {
+  background-color: #fff;
+}
+
+.top-box {
+  z-index: 10;
+  position: absolute;
+  top: 22px;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background-image: url('./Images/icons/yellow_blocks_3.png'); 
+  background-size: cover; 
+  background-position: center;
+}
+
+.icon {
+  width: 60px; /* Set custom width */
+  height: auto; /* Maintain aspect ratio */
+  cursor: pointer; /* Make it clickable */
+  transition: transform 0.3s ease; /* Optional: Smooth transformation */
+}
+
+.icon:hover {
+  transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+
+.background-image {
+  z-index: 11;
+  position: absolute;
+  top: 25%;
+  right: 9%;
+  width: 750px;
+  height: 300px;
+  background-image: url('./Images/icons/yellow_blocks_2.png'); 
+  background-size: cover; 
+  background-position: center;
+}
+
+.background-image-1 {
+  z-index: 11;
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  width: 300px;
+  height: 300px;
+  background-image: url('./Images/icons/yellow_blocks_2_2.png'); 
+  background-size: cover; 
+  background-position: center;
+}
+
+.background-image-2 {
+  z-index: 11;
+  position: absolute;
+  top: 70%;
+  left: 20%;
+  width: 200px;
+  height: 200px;
+  background-image: url('./Images/icons/yellow_blocks_5.png'); 
+  background-size: cover; 
+  background-position: center;
+}

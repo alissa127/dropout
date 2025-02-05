@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DROPOUT</title>
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+     </head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html" id="home-link" class="dropout">DROPOUT</a></li>
+        <li><a href="info.html" id="info-link" class="info">INFO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="top-box"></div>
+    <div class="text-box">
+        <p>Wähle die richtige Option:</p>
+    </div>
+  <main>
+    <section id="home">
+      <div class="carousel-container" id="carousel-container">
+        <div class="carousel" id="carousel">
+           <!-- Carousel images will be dynamically injected here -->
+         </div>
+      </div> 
+
+      <!-- Range Slider and Icons -->
+        <div class="slider-container">
+        <img src="./Images/icons/icon_1_dropout.png" id="prev" class="icon" alt="Chevron Left">
+        <input type="range" min="0" max="100" value="0" class="slider" id="carouselSlider">
+        <img src="./Images/icons/icon_2_dropout.png" id="next" class="icon" alt="Chevron Left">
+      </div>
+    </section>
+  </main> 
+
+  <script src="script.js"></script>
+  <script src="get-images-script.js"></script>
+</body>
+</html>

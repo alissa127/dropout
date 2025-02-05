@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DROPOUT</title>
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">  
+    
+
+  </head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html" id="home-link" class="info-dropout">DROPOUT</a></li>
+        <li><a href="info.html" id="info-link" class="info-info">INFO</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="background-image-1"></div>
+  <main>
+    <section class="info-section" id="info">
+      <div class="info-container" id="info-container">
+        <div class="left-box" id="left-box">
+          Dropout ist eine Technik die beim Trainieren von neuronalen Netzwerken
+          angewendet wird. Während des Trainings werden zufällig bestimmte Neuronen <br />
+          in den Netzwerken "ausgeschaltet" - das heißt, ihre Aktivierungen werden auf null
+          gesetzt. Das Ziel von Dropout ist, dass das Modell nicht bloß die Merkmale der vorliegenden Trainingsdaten auswendig
+          lernt, sondern lernt, zugrundeliegende Muster zu erkennen, die mit neuen,
+          unbekannten Daten ebenfalls gut funktionieren. <br />So entsteht ein robusteres Modell
+          und "Overfitting" (eine Überanpassung an bestimmte Merkmale) wird vermieden.
+         </div>
+         <div class="background-image"></div>
+         <div class="background-image-2"></div>
+         <div class="center-box" id="center-box">
+          <div class="box" >
+          Dropout ist ein einfaches, aber wirkungsvolles Konzept zur Regularisierung
+          neuronaler Netze.<br />
+          Während der Trainingsphase eines neuronalen Netzes wird bei
+          jedem Vorwärtsdurchlauf ein Teil der Neuronen im Netz nach dem Zufallsprinzip
+          „fallen gelassen“ (oder deaktiviert). Das bedeutet, dass während des Trainings
+          einige Neuronen vorübergehend aus dem Netz entfernt werden und ihre Ausgabe
+          ignoriert wird.<br /> Dadurch wird das Netz gezwungen, robustere Merkmale zu erlernen,
+          indem es sich bei jedem Vorwärtsdurchlauf auf verschiedene Kombinationen von
+          Neuronen stützt, anstatt sich zu sehr an einen bestimmten Satz von Merkmalen
+          anzupassen.<br />
+          Wenn die Dropout-Rate auf 50 % eingestellt ist,
+          wird die Hälfte der Neuronen in einer Schicht während jeder Trainingsiteration
+          deaktiviert. Dadurch wird eine Form von Zufälligkeit eingeführt und es wird
+          verhindert, dass sich ein einzelnes Neuron zu sehr spezialisiert oder zu sehr auf
+          bestimmte Merkmale verlässt. Wichtig ist hierbei die Tatsache, dass Dropout nur
+          während des Trainings angewandt wird. Während der Generalisierung an neuen
+          Daten wird dagegen das gesamte Netz verwendet.<br /><br /><br /><br />
+          Warum Dropout funktioniert :<br /><br />
+          Neuronale Netze, insbesondere tiefe Netze mit vielen Parametern, neigen dazu, sich
+          dem Rauschen oder den Eigenheiten der Trainingsdaten anzupassen. Dropout
+          zwingt das Netz, flexibler zu sein und im Wesentlichen mehrere „unabhängige“
+          Netze zu lernen, die Gewichte und Merkmale gemeinsam nutzen. Dies verbessert
+          die Fähigkeit des Modells, auf neue Daten zu verallgemeinern, da das Netz nicht auf
+          bestimmte Neuronen oder Verbindungen angewiesen ist, die möglicherweise zu
+          stark an die Trainingsdaten angepasst sind.<br /><br /><br /><br />
+          Dropout in der Anwendung :<br /><br />
+          In der Praxis wird Dropout in der Regel während der Trainingsphase angewendet und
+          während der Inferenz (Tests) ausgeschaltet. Das bedeutet, dass bei der Verwendung
+          des Modells zur Vorhersage neuer Daten alle Neuronen aktiv sind und die volle
+          Kapazität des Netzes ausgenutzt wird. Allerdings werden die Gewichte während des
+          Trainings so skaliert, dass die erwartete Ausgabe zum Testzeitpunkt konsistent
+          bleibt.
+          Wenn zum Beispiel ein Neuron mit einer Wahrscheinlichkeit von 50 % während des
+          Trainings ausfällt, werden die Aktivierungen der verbleibenden Neuronen zum
+          Testzeitpunkt um den Faktor 2 nach oben skaliert. Diese Anpassung stellt sicher,
+          dass die Gesamtausgabe während der Inferenz der erwarteten Ausgabe während
+          des Trainings entspricht, wobei die Regularisierung der Ausfälle berücksichtigt wird.
+          <br /><br /><br /><br />Hyperparameter :<br /><br />
+          Die Dropout-Rate (die Wahrscheinlichkeit des Ausscheidens eines Neurons) ist ein
+          Hyperparameter, der abgestimmt werden muss. Ein typischer Bereich für DropoutRaten liegt zwischen 20 % und 50 %. Eine zu niedrige Dropout-Rate hat
+          möglicherweise keinen großen Effekt, während eine zu hohe Rate
+          das Modell am effektiven Lernen hindern kann. Wie bei jedem Hyperparameter
+          hängt die optimale Rate von der jeweiligen Aufgabe und dem Datensatz ab.
+          <br /><br /><br /><br />Trainingszeit:<br /><br />
+          Dropout kann die für das Training eines Modells benötigte Zeit
+          erhöhen, da es Zufälligkeiten in den Prozess einführt und das Netzwerk sich an eine
+          weniger stabile Trainingsumgebung anpassen muss. Dies wird jedoch häufig durch
+          die verbesserte Generalisierung und die bessere Leistung bei ungesehenen Daten
+          kompensiert. 
+          <br /><br /><br /><br />Modellkomplexität:<br /><br />
+          Dropout fördert einfachere, allgemeinere Modelle,
+          indem es das Netz zwingt, eine breite Palette von Merkmalen und Abhängigkeiten zu
+          verwenden. Dies kann zu Modellen führen, die bei realen Daten, bei denen die
+          Variabilität hoch ist, besser abschneiden.
+          <br /><br /><br /><br />Einschränkungen von Dropout:<br /><br />
+          Dropout ist zwar ein leistungsstarkes Werkzeug, aber kein Allheilmittel. Insbesondere wenn der Trainingsdatensatz sehr klein ist, kann
+          Dropout keine wesentlichen Verbesserungen bringen. Außerdem kann es bei der
+          Verwendung von Dropout mit sehr komplexen Modellen mehr Iterationen
+          benötigen, um zu konvergieren, was rechenintensiv sein kann.
+          <br /><br /><br /><br />Fazit :<br /><br />
+          Dropout ist eine der effektivsten und am weitesten verbreiteten Techniken zur
+          Regularisierung tiefer neuronaler Netze. Durch die zufällige Deaktivierung von
+          Neuronen während des Trainings wird eine Überanpassung verhindert, das
+          Netzwerk gezwungen, robuste Merkmale zu lernen, und die Generalisierung auf
+          ungesehene Daten verbessert.
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </div>
+        </div>
+      </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="get-images-script.js"></script>
+</body>
+</html>
